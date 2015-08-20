@@ -1,0 +1,19 @@
+<h3> Listado de Preguntas </h3>
+<form method="get" action="/quizes">
+	<br>Buscar preguntas:<p>
+	<input class ="input" type="text" name="search" value="Introduzca texto a buscar" />
+	<input type="submit" value="Buscar">
+</form>
+<table>
+<% var i; for (i = 0; i < quizes.length; i++) { %>
+	<tr>
+		<td><a href="quizes/<%=quizes[i].id %>"><%= quizes[i].pregunta %> </a></td>
+		<% if (session.user) {%>
+			<td><a href="quizes/<%=quizes[i].id %>/edit"><button>Editar</button></a></td>
+		<% } %>
+	</tr>
+<% } %>
+</table><p>
+<% if (session.user) {%>
+	<a href="/quizes/new"> <button type="button"> Crear pregunta </button></a>
+<% } %>

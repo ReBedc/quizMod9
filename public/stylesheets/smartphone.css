@@ -1,0 +1,33 @@
+body {
+	background-color: #333;
+	font-size: 16px;
+}
+
+#page-wrap > header  { 
+	display: block;
+	height: 30px;
+	padding: 20px 20px;
+	background-color: rgba(54, 31, 85, 0.9);
+	color: white;
+	font-size: 16px; 
+}
+
+#page-wrap:after {
+	content: "Smartphone Layout";
+}
+
+h2 span, section h3 {
+	display: none;
+}
+
+
+.input {
+	font-size: large;
+	margin-top: 2%;
+	margin-left: 15%;
+}
+
+.volver {
+	text-align: center;
+	margin-left: 30%;
+}
